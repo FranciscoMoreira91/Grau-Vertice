@@ -1,0 +1,30 @@
+adj = [ [0, 1, 0, 1, 0],
+            [ 1, 0, 0, 0, 1],
+            [ 0, 0, 0, 0, 0],
+            [ 0, 0, 0, 0, 1],
+            [1, 0, 1, 0, 0] ]
+
+inc = [ [-1, -1, 1, 0, 0, 1, 0],
+            [ 0, 1, -1, -1, 0, 0, 0],
+            [ 0, 0, 0, 0, 0, 0, 1],
+            [ 1, 0, 0, 0, -1, 0, 0],
+            [0, 0, 0, 1, 1, -1, -1] ]
+
+counter = 0
+print("Adjacente")
+for i in range(5):
+    for j in range(5):
+        if (adj[i][j] == 1):
+            counter = counter + 1
+    print("Grau de saida: ", counter, " para o vertice: ", i)
+counter = 0
+
+print("")
+counter = 0
+print("Incidente")
+for i in range(5):
+    for j in range(7):
+        if (inc[i][j] == -1):
+            counter = counter + 1
+    print("Grau de saida: ", counter, " para o vertice: ", i)
+counter = 0
